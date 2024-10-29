@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validasi input di HTML</title>
+    <!-- Js -->
+    <script>
+      function validasi() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+        if (nama != "" && email != "") {
+          return true;
+        } else {
+          alert("Anda harus mengisi data dengan lengkap!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <form action="#" method="POST" onSubmit="validasi()">
+        <div>
+          <label>Masukan Usename:</label>
+          <input type="text" name="nama" id="nama" />
+        </div>
+        <div>
+          <label>Masukan Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div>
+          <input type="submit" value="Daftar" class="button" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
